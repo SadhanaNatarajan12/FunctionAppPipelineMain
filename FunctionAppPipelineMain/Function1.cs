@@ -26,7 +26,7 @@ namespace FunctionAppPipelineMain
             name = name ?? data?.name;
 
             return name != null
-                ? (ActionResult)new OkObjectResult($"Call from primary azure function app: Hello, {name}")
+                ? (ActionResult)new OkObjectResult($"Trigger from pipeline: Call from primary azure function app: Hello, {name}")
                 : new BadRequestObjectResult("Please pass a name on the query string or in the request body");
         }
     }
